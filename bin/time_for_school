@@ -8,13 +8,29 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+sarah = Student.new 
+sarah.first_name = "Sarah"
+sarah.last_name = "Strange"
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new 
+jim.first_name = "Jim"
+jim.last_name = "Patterson"
+
+#jim.learn("Something good")
 
 some_knowledge = avi.teach 
+more_knowledge = avi.teach
 
 steve.learn(some_knowledge)
+steve.learn(more_knowledge)
+sarah.learn(some_knowledge)
+sarah.learn(more_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Steve also learned this: '#{steve.knowledge[1]}' from Avi"
+puts "Then Sarah learned: '#{sarah.knowledge.first}' from Avi"
+puts "Then she also learned: '#{sarah.knowledge[1]}' from Avi"
